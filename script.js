@@ -1,7 +1,7 @@
 let emailID = document.getElementById("email");
 let messageID = document.getElementById("message");
 let phoneID = document.getElementById("phone");
-
+let nameID = document.getElementById("name");
 
 
 //SMTP EMAIL FUNCTION 
@@ -13,7 +13,8 @@ function sendEmail() {
         To: phoneID.value,
         From: "calagkit100@gmail.com",
         Subject: "New Contact Form Enquiry",
-        Body: messageID.value
+        Body: messageID.value,
+        Name: (`Name:${nameId.value}`)
     }).then(
         message => alert("Message Sent Successfully")
     );
