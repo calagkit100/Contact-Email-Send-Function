@@ -13,8 +13,7 @@ function sendEmail() {
         To: phoneID.value,
         From: "calagkit100@gmail.com",
         Subject: "New Contact Form Enquiry",
-        Body: messageID.value,
-        Name: (`Name:${nameId.value}`)
+        Body: (`Name:${nameID} ${messageID}`)
     }).then(
         message => alert("Message Sent Successfully")
     );
